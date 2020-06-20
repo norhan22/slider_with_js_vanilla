@@ -42,7 +42,7 @@ body {
 
         img {
             position: absolute;
-            opacity: .3;
+            opacity: 0;
             transition: opacity 1s;
             z-index: 1;
             top: 0;
@@ -83,6 +83,7 @@ body {
 
             &.disable {
                 background-color: rgba($color: #000000, $alpha: .4);
+                cursor: not-allowed;
             }
         }
 
@@ -90,12 +91,16 @@ body {
             li {
                 display: inline-block;
                 color: #000;
-                background-color: #e1e1e1;
+                background-color: #eeeeee;
                 padding: 5px 10px;
                 border-radius: $borderRa;
                 cursor: pointer;
                 margin-right: 5px;
                 font-weight: bold;
+
+                &.active {
+                    background-color: #cecece;
+                }
             }
         }
 
